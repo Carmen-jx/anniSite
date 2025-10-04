@@ -1,0 +1,23 @@
+.floating-img {
+position: fixed;
+width: 100vw;
+height: 100vh;
+overflow: hidden;
+top: 0;
+left: 0;
+pointer-events: none;
+}
+
+.floating-img-bg { position: absolute; inset: 0; pointer-events: none; }
+.floating-img-glow { position: absolute; filter: blur(48px); opacity: 0.35; border-radius: 9999px; }
+
+.floating-img {
+position: absolute;
+pointer-events: none;
+user-select: none;
+will-change: transform;
+filter: drop-shadow(0 8px 20px rgba(255, 67, 67, 0.35));
+backface-visibility: hidden;
+transform-style: preserve-3d;
+contain: paint;
+}
