@@ -4,7 +4,7 @@ import { supabase } from '../lib/supabase';
 import LetterForm from "../components/LetterForm";
 import LetterModal from "../components/LetterModal";
 import LetterCard from "../components/LetterCard";
-import { chiikawaHeart, chiikawaLetter } from "../asset/importImg";
+import { chiikawaHeart } from "../asset/importImg";
 import { useNavigate } from "react-router-dom";
 
 
@@ -19,9 +19,9 @@ export default function Admin() {
 
     useEffect(() => {
         (async () => {
-            const data = await fetchLetters();
-            console.log(data);
-            if (data) setLetters(data);
+            const fetchedData = await fetchLetters();
+            console.log(fetchedData);
+            if (fetchedData) setLetters(fetchedData);
             setLoading(false);
         })();
     }, []);
@@ -74,7 +74,7 @@ export default function Admin() {
     }
 
     async function deleteLetter(id) {
-      const {data, error} = await supabase
+      const { error } = await supabase
       .from("letters")
       .delete()
       .eq("id", id)

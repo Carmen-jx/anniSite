@@ -1,7 +1,5 @@
 import React from 'react';
 import { BgFrame } from '../asset/importImg';
-import FloatingImg from './FloatingImg';
-import { FloatingImgAssets } from '../asset/importImg';
 
 export default function Layout({ children }) {
   return (

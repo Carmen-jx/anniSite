@@ -48,6 +48,7 @@ export default function Dashboard() {
         <div className="banner"> 
           <h1>Dear Trevor</h1>
         </div>
+        {loading && <p style={{ opacity: 0.7, textAlign: "center" }}>Loading…</p>}
         <div className="letter-container">
           {letters.length === 0 ? (
             <p style={{ opacity: 0.7, textAlign: "center" }}>No letters yet.</p>
