@@ -1,0 +1,8 @@
+{
+  "buildCommand": "cd anni && npm install && npm run build",
+  "outputDirectory": "anni/build",
+  "installCommand": "echo 'skip'",
+  "env": {
+    "CI": "false"
+  }
+}
